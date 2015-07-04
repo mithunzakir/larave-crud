@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Http\Requests\EventRequest;
+use App\Event;
 use App\Http\Controllers\Controller;
 
-class Delete extends Controller
+class EventController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +18,7 @@ class Delete extends Controller
      */
     public function index()
     {
-        //
+        return view('event.create');
     }
 
     /**
@@ -34,9 +36,9 @@ class Delete extends Controller
      *
      * @return Response
      */
-    public function store()
+    public function store(EventRequest $request)
     {
-        //
+        Event::create($request->all());
     }
 
     /**
