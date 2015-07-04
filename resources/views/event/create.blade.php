@@ -1,6 +1,6 @@
 @extends('app')
 @section('content')
-{!! Form::open(['url' => 'create_event']) !!}
+{!! Form::open(['url' => 'create_event', 'class'=>"form-horizontal"]) !!}
   <div class="form-group">
     <label class="control-label col-sm-2" for="email">Event Name</label>
     <div class="col-sm-10">
